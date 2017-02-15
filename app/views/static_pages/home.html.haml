@@ -78,6 +78,10 @@
             .col-md-12{style: "padding: 20px"}
               %img.img-rounded{src: "assets/products/img-#{n + 1}.jpg", style: "width: 100%"}
             .col-md-12
+              .price.text-center
+                %span
+                  %b $400
+                %small{style: "text-decoration: line-through;"} $500
               .title.text-center
                 %h3 Trà sen ướp tuyết
               .content
@@ -99,10 +103,11 @@
         %span.line-home{src: "assets/backline.png", style: "width: 100%; height: 17px; position: absolute;"}
     .row.suggest
       - 5.times do |n|
-        .col-md-4.col-sm-6{style: "margin-bottom: 25px"}
-          %img{src: "assets/square/img-#{n+1}.jpg", style: "width: 100%;"}
-          %a{href: "#"}
-            %span.title Trà sen trong ký ức
+        %a.article{href: "#"}
+          .col-md-4.col-sm-6{style: "margin-bottom: 25px"}
+            %img{src: "assets/square/img-#{n+1}.jpg", style: "width: 100%;"}
+            %a{href: "#"}
+              %span.title Trà sen trong ký ức
 %section#contact
   .container
     .row
@@ -112,7 +117,7 @@
         %p Giao hang toan quoc
         %p Chung toi giao hang den 64 tinh thanh
         %hr
-        %p Mien phi van chuyen noi t hanh
+        %p Mien phi van chuyen noi thanh
         %p Chung toi hien dang mien phi van chuyen cho cac khang hang mua don hang tren 500 nghin VND trong cac quan noi thanh ha noi
         %hr
         %span hotline ho tro

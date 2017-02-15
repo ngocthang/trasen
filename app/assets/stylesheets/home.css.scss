@@ -1,8 +1,28 @@
+.navbar {
+  background: #F2F0EB;
+}
 .section {
   margin-bottom: 20px;
 }
 #main_product {
+  h1, h2, h3, h4 {
+    color: #4D4237;
+  }
+  a, p {
+    color: #a57a4b;
+  }
   a.product {
+    .price {
+      span {
+        font-size: 30px;
+      }
+      small {
+        font-size: 20px;
+      }
+    }
+    .title h3 {
+      margin-top: 10px;
+    }
     & .col-md-3:hover {
       background: #ddd;
       border-radius: 5px;
@@ -10,6 +30,10 @@
   }
 }
 #introduce_product {
+  background: #F2F0EB;
+  h1 {
+    color: #4D4237;
+  }
   ul {
     float: right;
     position: absolute;
