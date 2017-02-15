@@ -10,17 +10,13 @@
         %strong TRÀ SEN
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} HOME
         %li
-          %a{:href => "#about"} TRÀ SEN
+          %a{:href => "#slide"} HOME
         %li
-          %a{:href => "#contact"} TRÀ VIỆT NAM
+          %a{:href => "#main_product"} SẢN PHẨM CHÍNH
         %li
-          %a{:href => "#contact"} TRÀ THƯ
-        %li
-          %a{:href => "#contact"} TRÀ THUẦN VIỆT
-      .col-md-3.col-sm-1
+          %a{:href => "#introduce_product"} TRANG TIN TỨC
+      .col-md-3.col-sm-3
         %form.navbar-form{:role => "search"}
           .input-group
             %input.form-control{:name => "q", :placeholder => "Search", :type => "text"}/
@@ -28,12 +24,12 @@
               %button.btn.btn-default{:type => "submit"}
                 %i.glyphicon.glyphicon-search
       %ul.nav.navbar-nav.navbar-right
-        / %li.active
-        /   %a{:href => "#"} About
         %li
-          %a{:href => "#"} Contact
+          %a{:href => "#contact"} VỀ CHÚNG TÔI
+        %li
+          %a{:href => "#contact"} LIÊN HỆ
 
-.section.slide
+.section#slide
   %br
   #myCarousel.carousel.slide{"data-ride" => "carousel"}
     / Indicators
@@ -46,12 +42,24 @@
     .carousel-inner{:role => "listbox"}
       .item.active
         %img{:alt => "Chania", :height => "345", :src => "assets/slide/img-1.jpg", :width => "100%"}
+        .carousel-caption
+          %h3 Chania
+          %p The atmosphere in Chania has a touch of Florence and Venice.
       .item
         %img{:alt => "Chania", :height => "345", :src => "assets/slide/img-2.jpg", :width => "100%"}
+        .carousel-caption
+          %h3 Chania
+          %p The atmosphere in Chania has a touch of Florence and Venice.
       .item
         %img{:alt => "Flower", :height => "345", :src => "assets/slide/img-3.jpg", :width => "100%"}
+        .carousel-caption
+          %h3 Chania
+          %p The atmosphere in Chania has a touch of Florence and Venice.
       .item
         %img{:alt => "Flower", :height => "345", :src => "assets/slide/img-4.jpg", :width => "100%"}
+        .carousel-caption
+          %h3 Chania
+          %p The atmosphere in Chania has a touch of Florence and Venice.
     / Left and right controls
     %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
       %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
@@ -59,24 +67,24 @@
     %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
       %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
       %span.sr-only Next
-%div{style: "width:  100%; height: 50px"}
-.section
+%div{style: "width:  100%;"}
+.section#main_product{style: "padding-top: 50px"}
   .container
     .row
       %h1.text-center{style: "font-size: 50px; margin-bottom: 40px;"} Những sản phẩm nổi bật
-      - 4.times do
-        .col-md-3.col-sm-6
-          .col-md-12{style: "padding: 20px"}
-            %img.img-rounded{src: "assets/test-1.png", style: "width: 100%"}
-          .col-md-12
-            .title.text-center
-              %h3 Trà sen ướp tuyết
-            .content
-              %p{style: "text-align: justify"} Được mệnh danh là “Thiên cổ đệ nhất trà”, là loại trà tinh tế nhất của Việt Nam, các nước khác trên thế giới không có được. Nguyên liệu trà được dùng là những búp trà cổ thụ mọc trên núi cao, mỗi năm chỉ hái được 4 lần vào 4 mùa xuân, hạ, thu, đông.
-
-.jumbotron.introduce
+      - 4.times do |n|
+        %a.product{href: "#"}
+          .col-md-3.col-sm-6
+            .col-md-12{style: "padding: 20px"}
+              %img.img-rounded{src: "assets/products/img-#{n + 1}.jpg", style: "width: 100%"}
+            .col-md-12
+              .title.text-center
+                %h3 Trà sen ướp tuyết
+              .content
+                %p{style: "text-align: justify"} Được mệnh danh là “Thiên cổ đệ nhất trà”, là loại trà tinh tế nhất của Việt Nam, các nước khác trên thế giới không có được. Nguyên liệu trà được dùng là những búp trà cổ thụ mọc trên núi cao, mỗi năm chỉ hái được 4 lần vào 4 mùa xuân, hạ, thu, đông.
+.jumbotron#introduce_product
   .container
-    .row{style: "height: 110px; margin-bottom: 25px;"}
+    .row{style: "height: 110px; margin-bottom: 50px;"}
       .col-md-12
         %h1 TRÀ SEN TÂY HỒ
         %ul
@@ -90,12 +98,12 @@
             %a{href: "%"} Trà cụ khác
         %span.line-home{src: "assets/backline.png", style: "width: 100%; height: 17px; position: absolute;"}
     .row.suggest
-      - 6.times do
+      - 5.times do |n|
         .col-md-4.col-sm-6{style: "margin-bottom: 25px"}
-          %img{src: "assets/test-1.png", style: "width: 100%;"}
+          %img{src: "assets/square/img-#{n+1}.jpg", style: "width: 100%;"}
           %a{href: "#"}
             %span.title Trà sen trong ký ức
-%section
+%section#contact
   .container
     .row
       .col-md-4.col-sm-4
@@ -127,41 +135,6 @@
         %h2 Chung toi tren Facebook
         %img{src: "assets/test-1.png"}
 %div{style: "width: 100%; height: 50px"}
-:scss
-  .introduce {
-    ul {
-      float: right;
-      position: absolute;
-      right: 120px;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      li {
-        display: inline;
-        a {
-          color: #fff;
-          padding: 10px 20px;
-          background: #2D3E50;
-          border-radius: 5px;
-        }
-        margin-right: 20px;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-    .suggest {
-      .title {
-        float: left;
-        width: 90%;
-        padding: 10px;
-        background: none repeat scroll 0 0 #000000;
-        opacity: 0.75;
-        color: #fff;
-        text-decoration: none;
-        margin-top: -60px;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-    }
-  }
+
+= stylesheet_link_tag "home"
+= javascript_include_tag "home"

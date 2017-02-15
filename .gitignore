@@ -19,3 +19,29 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore all logfiles and tempfiles.
+/**/.DS_Store
+/.env
+/tags
+/db/xls
+
+/config/database.yml
+/config/secrets.yml
+
+/public/uploads/
+/public/assets/
+/coverage
+/dump.rdb
+
+/vendor/bin
+/vendor/bundle
+.idea
+
+/public/coverage
+
+# /config/deploy/staging.rb
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
