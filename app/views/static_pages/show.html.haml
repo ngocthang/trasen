@@ -1,0 +1,133 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        %strong TRÀ SEN
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => "#slide"} HOME
+        %li
+          %a{:href => "#main_product"} SẢN PHẨM CHÍNH
+        %li
+          %a{:href => "#introduce_product"} TRANG TIN TỨC
+      .col-md-3.col-sm-3
+        %form.navbar-form{:role => "search"}
+          .input-group
+            %input.form-control{:name => "q", :placeholder => "Search", :type => "text"}/
+            .input-group-btn
+              %button.btn.btn-default{:type => "submit"}
+                %i.glyphicon.glyphicon-search
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#contact"} VỀ CHÚNG TÔI
+        %li
+          %a{:href => "#contact"} LIÊN HỆ
+.section{style: "margin-top: 50px; padding-top: 20px"}
+  .container
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "#"} Home
+      %li.breadcrumb-item
+        %a{:href => "#"} Library
+      %li.breadcrumb-item.active
+        %span Data
+    .row.product-basic-information
+      .col-md-12
+        .col-lg-7
+          .image-thumb
+            %ul
+              - 5.times do |n|
+                %li
+                  %img{src: "assets/square/img-#{n+1}.jpg"}
+          .product-image
+            %img{src: "assets/square/img-1.jpg"}
+        .col-lg-5
+          %h1
+            %b Quisque eget
+          .rating-section.pull-right
+            .rating
+              %span.fa.fa-stack
+                %i.fa.fa-star.fa-stack-1x
+                %i.fa.fa-star-o.fa-stack-1x
+              %span.fa.fa-stack
+                %i.fa.fa-star.fa-stack-1x
+                %i.fa.fa-star-o.fa-stack-1x
+              %span.fa.fa-stack
+                %i.fa.fa-star.fa-stack-1x
+                %i.fa.fa-star-o.fa-stack-1x
+              %span.fa.fa-stack
+                %i.fa.fa-star.fa-stack-1x
+                %i.fa.fa-star-o.fa-stack-1x
+              %span.fa.fa-stack
+                %i.fa.fa-star.fa-stack-1x
+                %i.fa.fa-star-o.fa-stack-1x
+              %a{onclick: "#"} 3 reviews
+              \/
+              %a{onclick: "#"} Write a review
+          .price-section
+            %span
+              %b $400
+            %small{style: "text-decoration: line-through;"} $500
+          %hr
+          %h3.properties-title
+            %b Properties
+          %ul.product-properties
+            %li
+              Brand:
+              %span Lorem ipsum
+            %li
+              Product Code:
+              %span Product 16
+            %li
+              Reward Points:
+              %span 600
+            %li
+              Availability:
+              %span In Stock
+    .row.desciption-section
+      %h1.text-center
+        %b Description
+      .description-video.pull-left
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/8mvK9WZj1ko?rel=0&controls=0&showinfo=0", :width => "560"}
+      .description-content
+        %span Would you like a cup of tea? We have a wide range of fresh teas and the products to serve them! Our gourmet tea assortments will suit any occasion and any taste. Green tea, black tea, white tea, flavored tea and many others to surprise and astonish you! We are experts in tea and we will teach you this art with pleasure! If you are already a tea lover, you will find a real paradise of tea aromas and tastes visiting our Tea store.
+
+        Our goal is to fill your cup with joy you can share with guests and friends leaving far away boring fuss. Turn your tea time into a special ceremony we have cared about proposing you the products of premium quality only. This old drink with a long history and deserved love of millions is worth of a proper attitude and we are glad to share with you a nice collection of teapots, mugs, cups, kettles, tea sets and other useful accessories which will add your tea time with necessary charm and luxury. We have tea blends for any situation and mood: taste our teas to wake up, relax, rejuvenate. Do you want some exotic tea? You are welcome. We are ready to please tea beginners and tea gurus.
+%section#contact
+  .container
+    .row
+      .col-md-4.col-sm-4
+        %h2 Chung toi cam ket
+        %hr
+        %p Giao hang toan quoc
+        %p Chung toi giao hang den 64 tinh thanh
+        %hr
+        %p Mien phi van chuyen noi thanh
+        %p Chung toi hien dang mien phi van chuyen cho cac khang hang mua don hang tren 500 nghin VND trong cac quan noi thanh ha noi
+        %hr
+        %span hotline ho tro
+        %strong 0123456789
+      .col-md-4.col-sm-4
+        %h2 Lien he
+        %p TRASEN.VN - Noi cung cap tra sen tay ho chinh hieu
+        %p Tru so chinh: So 123 ABC, Quan XYZ, TP. Ha Noi
+        %p Dia diem mua Tra Sen:
+        %p Dia Diem 1: So 169 Nghi Tam, Q.Tay Ho, Tp. Ha Noi
+        %p Dia Diem 2: So 133 Tran Cung, Q.Tay Ho, Tp. Ha Noi
+        %p Tong dai ho tro:
+        %b 0123 456 789
+        %p Hotline:
+        %b 0123 456 789
+        %br
+        %span Email:
+        %a{href: "#"} abc@gmail.com
+      .col-md-4.col-sm-4
+        %h2 Chung toi tren Facebook
+        %img{src: "assets/test-1.png"}
+= stylesheet_link_tag "show"
