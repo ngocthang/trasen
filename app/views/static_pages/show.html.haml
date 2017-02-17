@@ -1,5 +1,5 @@
 = render "UI/header"
-.section{style: "margin-top: 50px; padding-top: 20px"}
+.section#product-section{style: ""}
   .container
     %ol.breadcrumb
       %li.breadcrumb-item
@@ -28,9 +28,9 @@
               %i.fa.fa-star
               %i.fa.fa-star
               %i.fa.fa-star-half-o
-              %a{onclick: "#"} 3 reviews
+              %a{href: "#reviews-section"} 3 reviews
               \/
-              %a{onclick: "#"} Write a review
+              %a{href: "#form-reivew-section"} Write a review
           .price-section
             %span
               %b $400
@@ -51,8 +51,10 @@
             %li
               Availability:
               %span In Stock
-    .row.desciption-section
-      %h1.text-center
+.section#desciption-section
+  .container
+    .row
+      %h1.text-center.description-title
         %b Description
       .description-video.pull-left
         %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/8mvK9WZj1ko?rel=0&controls=0&showinfo=0", :width => "560"}
@@ -60,10 +62,78 @@
         %span Would you like a cup of tea? We have a wide range of fresh teas and the products to serve them! Our gourmet tea assortments will suit any occasion and any taste. Green tea, black tea, white tea, flavored tea and many others to surprise and astonish you! We are experts in tea and we will teach you this art with pleasure! If you are already a tea lover, you will find a real paradise of tea aromas and tastes visiting our Tea store.
 
         Our goal is to fill your cup with joy you can share with guests and friends leaving far away boring fuss. Turn your tea time into a special ceremony we have cared about proposing you the products of premium quality only. This old drink with a long history and deserved love of millions is worth of a proper attitude and we are glad to share with you a nice collection of teapots, mugs, cups, kettles, tea sets and other useful accessories which will add your tea time with necessary charm and luxury. We have tea blends for any situation and mood: taste our teas to wake up, relax, rejuvenate. Do you want some exotic tea? You are welcome. We are ready to please tea beginners and tea gurus.
+
+.section#reviews-section
+  .container
+    %h1.text-center.reviews-title
+      %b Reviews(3)
+    .reviews-content
+      - 3.times do
+        .row
+          .col-md-3.reviews-left.text-center
+            .review-score
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star-half-o
+            .review-author
+              %span Le Dinh Minh
+            .review-date
+              %span 17/09/1991
+          .col-md-9.reviews-right
+            %p Vestibulum ut neque eget dui tincidunt molestie. Mauris accumsan fermentum mi a cursus. Aenean ac mauris eget mi consectetur tristique vitae in nisi. In posuere lorem non eleifend suscipit. Vestibulum non nunc eu mauris lacinia malesuada nec vitae velit. Vivamus tincidunt aliquam elementum. Aliquam ut faucibus lacus.
+        %hr
+
+.section#form-reivew-section
+  .container
+    %h1.text-center.reviews-title
+      %b Write a review
+    .form-write-review
+      .row
+        %form.form-horizontal
+          .form-group
+            %label.control-label.col-md-3 Your Name
+            .col-md-9
+              %input.form-control
+          .form-group
+            %label.control-label.col-md-3 Your Review
+            .col-md-9
+              %textarea.form-control
+          .form-group
+            %label.control-label.col-md-3 Rating
+            .col-md-9
+              %label.radio-inline
+                %input{:name => "optradio", :type => "radio"}>
+                Very Bad
+              %label.radio-inline
+                %input{:name => "optradio", :type => "radio"}>
+                Bad
+              %label.radio-inline
+                %input{:name => "optradio", :type => "radio"}>
+                Normal
+              %label.radio-inline
+                %input{:name => "optradio", :type => "radio"}>
+                Good
+              %label.radio-inline
+                %input{:name => "optradio", :type => "radio"}>
+                Very Good
+          .form-group
+            %label.control-label.col-md-3 Enter the code in the box below
+            .col-md-9
+              %input.form-control
+              %input.rating.rating-loading{data: {min: 0, max: 5, step: 1}}
+          .form-group
+            .col-md-9.col-md-offset-3
+              %img#captcha{src: "#"}
+              %span.btn.btn-primary.btn-review.pull-right Continue
+
+
 = render "UI/footer"
 = stylesheet_link_tag "show"
 
 :javascript
+  //click change image product #product-section
   $(".image-thumb img").click(function(){
     $(".product-image:visible img").attr("src", $(this).attr("src"));
   })
