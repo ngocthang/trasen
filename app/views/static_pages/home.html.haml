@@ -74,9 +74,15 @@
       %h1.text-center{style: "font-size: 50px; margin-bottom: 40px;"} Những sản phẩm nổi bật
       - 4.times do |n|
         %a.product{href: "#"}
-          .col-md-3.col-sm-6
-            .col-md-12{style: "padding: 20px"}
-              %img.img-rounded{src: "assets/products/img-#{n + 1}.jpg", style: "width: 100%"}
+          .col-md-3.col-sm-6.product-wrap
+            .col-md-12.rating-show
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star-half-o
+            .col-md-12.text-center{style: "padding: 20px"}
+              %img.img-rounded{src: "assets/products/img-#{n + 1}.jpg", style: "width: 100%; height: 190px"}
             .col-md-12
               .price.text-center
                 %span
@@ -86,6 +92,9 @@
                 %h3 Trà sen ướp tuyết
               .content
                 %p{style: "text-align: justify"} Được mệnh danh là “Thiên cổ đệ nhất trà”, là loại trà tinh tế nhất của Việt Nam, các nước khác trên thế giới không có được. Nguyên liệu trà được dùng là những búp trà cổ thụ mọc trên núi cao, mỗi năm chỉ hái được 4 lần vào 4 mùa xuân, hạ, thu, đông.
+            .col-md-12.btn-active
+              %span.btn-btn-default.btn-rating
+                %i.fa.fa-star
 .jumbotron#introduce_product
   .container
     .row{style: "height: 110px; margin-bottom: 50px;"}

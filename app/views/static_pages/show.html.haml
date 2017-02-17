@@ -39,7 +39,7 @@
         %span Data
     .row.product-basic-information
       .col-md-12
-        .col-lg-7
+        .col-lg-7.left-wrap
           .image-thumb
             %ul
               - 5.times do |n|
@@ -47,26 +47,16 @@
                   %img{src: "assets/square/img-#{n+1}.jpg"}
           .product-image
             %img{src: "assets/square/img-1.jpg"}
-        .col-lg-5
-          %h1
+        .col-lg-5.right-wrap
+          %h1.product-name
             %b Quisque eget
-          .rating-section.pull-right
+          .rating-section
             .rating
-              %span.fa.fa-stack
-                %i.fa.fa-star.fa-stack-1x
-                %i.fa.fa-star-o.fa-stack-1x
-              %span.fa.fa-stack
-                %i.fa.fa-star.fa-stack-1x
-                %i.fa.fa-star-o.fa-stack-1x
-              %span.fa.fa-stack
-                %i.fa.fa-star.fa-stack-1x
-                %i.fa.fa-star-o.fa-stack-1x
-              %span.fa.fa-stack
-                %i.fa.fa-star.fa-stack-1x
-                %i.fa.fa-star-o.fa-stack-1x
-              %span.fa.fa-stack
-                %i.fa.fa-star.fa-stack-1x
-                %i.fa.fa-star-o.fa-stack-1x
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star-half-o
               %a{onclick: "#"} 3 reviews
               \/
               %a{onclick: "#"} Write a review
@@ -115,19 +105,22 @@
         %strong 0123456789
       .col-md-4.col-sm-4
         %h2 Lien he
+        %hr
         %p TRASEN.VN - Noi cung cap tra sen tay ho chinh hieu
         %p Tru so chinh: So 123 ABC, Quan XYZ, TP. Ha Noi
         %p Dia diem mua Tra Sen:
         %p Dia Diem 1: So 169 Nghi Tam, Q.Tay Ho, Tp. Ha Noi
         %p Dia Diem 2: So 133 Tran Cung, Q.Tay Ho, Tp. Ha Noi
-        %p Tong dai ho tro:
+        %hr
+        %span Tong dai ho tro:
         %b 0123 456 789
-        %p Hotline:
+        %br
+        %span Hotline:
         %b 0123 456 789
         %br
         %span Email:
         %a{href: "#"} abc@gmail.com
-      .col-md-4.col-sm-4
+      .col-md-4.col-sm-4.text-center
         %h2 Chung toi tren Facebook
         %img{src: "assets/test-1.png"}
 = stylesheet_link_tag "show"

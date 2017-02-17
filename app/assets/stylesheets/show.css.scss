@@ -17,7 +17,7 @@ ol.breadcrumb {
 }
 .product-basic-information{
   margin-bottom: 35px;
-  .col-lg-7 {
+  .left-wrap {
     .image-thumb {
       width: 16%;
       float: left;
@@ -45,7 +45,14 @@ ol.breadcrumb {
       }
     }
   }
-  .col-lg-5 {
+  .right-wrap {
+    .product-name {
+      font-size: 42px;
+    }
+    .rating-section {
+      font-size: 18px;
+      padding: 15px 0;
+    }
     .price-section {
       width: 100%;
       color: #A57A4B;
@@ -73,6 +80,7 @@ ol.breadcrumb {
     margin-right: 20px;
   }
   .description-content {
+    text-align: justify;
     font-size: 23px;
     color: #886F55;
   }
