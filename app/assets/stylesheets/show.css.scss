@@ -18,6 +18,7 @@ ol.breadcrumb {
 .product-basic-information{
   margin-bottom: 35px;
   .left-wrap {
+    padding-left: 0;
     .image-thumb {
       width: 16%;
       float: left;
@@ -30,6 +31,10 @@ ol.breadcrumb {
           list-style: none;
           img {
             width: 100%;
+            &:hover {
+              cursor: pointer;
+              border: 1px solid #D02525;
+            };
           }
           &:last-child {
             margin-bottom: 0;

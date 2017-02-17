@@ -11,40 +11,39 @@
   a, p {
     color: #a57a4b;
   }
-  a.product {
-    .product-wrap {
-      .price {
-        span {
-          font-size: 30px;
-        }
-        small {
-          font-size: 20px;
-        }
+  .product-wrap {
+    padding: 20px;
+    .price {
+      span {
+        font-size: 30px;
       }
-      .title h3 {
-        margin-top: 10px;
+      small {
+        font-size: 20px;
       }
-      .content {
-        height: 150px;
-        margin-bottom: 15px;
-      }
-      & .col-md-3:hover {
-        background: #ddd;
-        border-radius: 5px;
-      };
-      .btn-active {
-        padding: 15px;
-        .btn-rating {
-          background: #ffa418;
-          padding: 14px 18px;
-          border-radius: 50%;
-          font-size: 18px;
-          color: #fff;
-          text-decoration: none;
-          &:hover {
-            background: #CD8514;
-          };
-        }
+    }
+    .title h3 {
+      margin-top: 10px;
+    }
+    .content {
+      height: 150px;
+      margin-bottom: 15px;
+    }
+    &:hover {
+      background: #eee;
+      border-radius: 5px;
+    };
+    .btn-active {
+      padding: 15px;
+      .btn-rating {
+        background: #ffa418;
+        padding: 14px 18px;
+        border-radius: 50%;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          background: #CD8514;
+        };
       }
     }
   }

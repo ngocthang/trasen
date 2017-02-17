@@ -62,3 +62,8 @@
         Our goal is to fill your cup with joy you can share with guests and friends leaving far away boring fuss. Turn your tea time into a special ceremony we have cared about proposing you the products of premium quality only. This old drink with a long history and deserved love of millions is worth of a proper attitude and we are glad to share with you a nice collection of teapots, mugs, cups, kettles, tea sets and other useful accessories which will add your tea time with necessary charm and luxury. We have tea blends for any situation and mood: taste our teas to wake up, relax, rejuvenate. Do you want some exotic tea? You are welcome. We are ready to please tea beginners and tea gurus.
 = render "UI/footer"
 = stylesheet_link_tag "show"
+
+:javascript
+  $(".image-thumb img").click(function(){
+    $(".product-image:visible img").attr("src", $(this).attr("src"));
+  })
