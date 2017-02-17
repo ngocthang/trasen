@@ -1,34 +1,4 @@
-%nav.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "/"}
-        %strong TRÀ SEN
-    #navbar.navbar-collapse.collapse
-      %ul.nav.navbar-nav
-        %li
-          %a{:href => "#slide"} HOME
-        %li
-          %a{:href => "#main_product"} SẢN PHẨM CHÍNH
-        %li
-          %a{:href => "#introduce_product"} TRANG TIN TỨC
-      .col-md-3.col-sm-3
-        %form.navbar-form{:role => "search"}
-          .input-group
-            %input.form-control{:name => "q", :placeholder => "Search", :type => "text"}/
-            .input-group-btn
-              %button.btn.btn-default{:type => "submit"}
-                %i.glyphicon.glyphicon-search
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#contact"} VỀ CHÚNG TÔI
-        %li
-          %a{:href => "#contact"} LIÊN HỆ
-
+= render "UI/header"
 .section#slide
   %br
   #myCarousel.carousel.slide{"data-ride" => "carousel"}
@@ -73,7 +43,7 @@
     .row
       %h1.text-center{style: "font-size: 50px; margin-bottom: 40px;"} Những sản phẩm nổi bật
       - 4.times do |n|
-        %a.product{href: "#"}
+        %a.product{href: "/show"}
           .col-md-3.col-sm-6.product-wrap
             .col-md-12.rating-show
               %i.fa.fa-star
@@ -117,38 +87,7 @@
             %img{src: "assets/square/img-#{n+1}.jpg", style: "width: 100%;"}
             %a{href: "#"}
               %span.title Trà sen trong ký ức
-%section#contact
-  .container
-    .row
-      .col-md-4.col-sm-4
-        %h2 Chung toi cam ket
-        %hr
-        %p Giao hang toan quoc
-        %p Chung toi giao hang den 64 tinh thanh
-        %hr
-        %p Mien phi van chuyen noi thanh
-        %p Chung toi hien dang mien phi van chuyen cho cac khang hang mua don hang tren 500 nghin VND trong cac quan noi thanh ha noi
-        %hr
-        %span hotline ho tro
-        %strong 0123456789
-      .col-md-4.col-sm-4
-        %h2 Lien he
-        %p TRASEN.VN - Noi cung cap tra sen tay ho chinh hieu
-        %p Tru so chinh: So 123 ABC, Quan XYZ, TP. Ha Noi
-        %p Dia diem mua Tra Sen:
-        %p Dia Diem 1: So 169 Nghi Tam, Q.Tay Ho, Tp. Ha Noi
-        %p Dia Diem 2: So 133 Tran Cung, Q.Tay Ho, Tp. Ha Noi
-        %p Tong dai ho tro:
-        %b 0123 456 789
-        %p Hotline:
-        %b 0123 456 789
-        %br
-        %span Email:
-        %a{href: "#"} abc@gmail.com
-      .col-md-4.col-sm-4
-        %h2 Chung toi tren Facebook
-        %img{src: "assets/test-1.png"}
-%div{style: "width: 100%; height: 50px"}
+= render "UI/footer"
 
 = stylesheet_link_tag "home"
 = javascript_include_tag "home"
