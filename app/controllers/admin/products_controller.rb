@@ -4,7 +4,8 @@ class Admin::ProductsController < Admin::BaseController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @q = Product.ransack params[:q]
+    @products = @q.result.page params[:page]
   end
 
   # GET /products/1

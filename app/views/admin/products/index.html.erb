@@ -2,6 +2,11 @@
 
 <h1>Products</h1>
 
+<%= search_form_for [:admin, @q], url: admin_products_path do |f| %>
+  <%= f.label :description_cont %>
+  <%= f.search_field :description_cont %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -29,7 +34,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @products %>
 <br>
 
 <%= link_to 'New Product', new_admin_product_path %>
