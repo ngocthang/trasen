@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get "show" => "static_pages#show"
 
   namespace :admin do
-    get "/" => "products#index"
+    get "/" => "system#dashboard"
     resources :products
+    resource :system, only: [] do
+      get "dashboard"
+    end
   end
 end
