@@ -64,6 +64,7 @@ gem "devise"
 gem "omniauth-facebook"
 gem "koala"
 gem "active_model_serializers"
+gem 'mini_magick'
 gem "carrierwave"
 gem "fog-aws"
 gem "apipie-rails"
