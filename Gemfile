@@ -19,6 +19,7 @@ gem 'unicorn'
 
 group :staging, :production do
   gem "capistrano"
+  gem 'capistrano3-unicorn'
   gem "capistrano-bundler"
   gem "capistrano-rails"
   gem "capistrano-rvm"
