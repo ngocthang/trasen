@@ -157,6 +157,8 @@ GEM
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     hashie (3.5.5)
     i18n (0.8.0)
     ipaddress (0.8.3)
@@ -376,6 +378,7 @@ DEPENDENCIES
   faker
   fog-aws
   font-awesome-rails
+  haml
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
